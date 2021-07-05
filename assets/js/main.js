@@ -28,7 +28,9 @@ $(document).ready(function(){
 	
 	//When user press the key to input the a character
 	$("#field1").on("keydown",function(e){
-		showState(this,'limbo');
+		if(e.keyCode != 9){
+			showState(this,'limbo');
+		}
 	});
 	
 	//When user releases the key after typing the character
